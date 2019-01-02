@@ -1,0 +1,8 @@
+<li [ngClass]="{'list-group-item':true}">
+  <div [ngStyle]="{'color': getColor(),'background-color': getBackgroundColor()}">
+    <h4>{{ postTitle }} <span>{{ created_at | date: 'short'}}</span> </h4>
+    <p>{{ postContent }}</p>
+    <button type="button" class="btn btn-success" (click)="like()"><span class="glyphicon glyphicon-thumbs-up"></span> Love it ! ({{ loveClick }})</button>
+    <button type="button" class="btn btn-danger" (click)="dontLike()"><span class="glyphicon glyphicon-thumbs-down"></span> Don't love it ! ({{ dontLoveClick }})</button>
+  </div>
+</li>
